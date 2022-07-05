@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:background="@drawable/customborder"
+    android:padding="15dp"
+    android:id="@+id/ownedStockTicket">
+
+
+    <TextView
+        android:id="@+id/stockSymbolLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="20dp"
+        android:text="Symbol: "/>
+    <TextView
+        android:id="@+id/stockSymbolText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/stockSymbolLabel"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="20dp"/>
+
+
+    <TextView
+        android:id="@+id/quantityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/quantityText"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Quantity: "
+        android:layout_marginStart="5dp"/>
+    <TextView
+        android:id="@+id/quantityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/stockNameLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stockSymbolText"
+        android:textSize="20dp"/>
+    <TextView
+        android:id="@+id/lastPriceLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stockNameLabel"
+        android:textSize="20dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

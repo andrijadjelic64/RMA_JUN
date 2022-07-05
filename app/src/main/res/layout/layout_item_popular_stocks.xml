@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/customborder"
+    android:id="@+id/popularStocksTicket">
+
+    <TextView
+        android:id="@+id/stockSymbolText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/stockNameLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stockSymbolText"/>
+    <TextView
+        android:id="@+id/lastPriceLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stockNameLabel"/>
+
+<!--    for this to work there is dependecy for charts and on settings.gradle add this line
+            maven { url 'https://jitpack.io' }
+            in dependencyResolutionManagement.repositories block-->
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chartLine"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastPriceLabel"
+        tools:layout_editor_absoluteX="10dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
